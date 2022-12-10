@@ -6,6 +6,9 @@ module.exports = {
 			fontFamily: {
 				inter: ['inter', 'serif'],
 			},
+			blur: {
+				xs: '1.5px'
+			},
 		},
 	},
 	plugins: [],
