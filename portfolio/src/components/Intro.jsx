@@ -7,8 +7,8 @@ function Intro() {
          <p className="text-base md:text-xl mb-3 font-medium">Software Information Technology Student</p>
          <p className="text-sm max-w-xl mb-6 font-bold">
             I'm a {new Date().getFullYear()-2001} year old Software Information Technology student at the University of Miskolc.
-            I'm very passionate about programming, that is the reason this page exists.
-            Here you can find all my references and past projects.
+            I like to learn new things and I'm open to anything.
+            Here you can find all my references and projects.
          </p>
       </div>
    )

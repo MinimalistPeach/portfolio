@@ -13,7 +13,7 @@ function TimelineItem({ year, title, duration, details }) {
                   {title}
                </h3>
                <div className="my-1 text-sm font-normal leading-none text-stone-400 dark:text-stone-500">
-                  {duration}
+                  Duration: {duration}
                </div>
             </p>
             <p className="my-2 text-base font-normal text-stone-500 dark:text-stone-400">
