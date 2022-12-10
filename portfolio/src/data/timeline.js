@@ -1,9 +1,9 @@
 export default [
    {
       year: new Date().getFullYear(),
-      title: 'Enthusiastic student',
-      duration: '3 years',
+      title: 'Getting accepted to middle school',
+      duration: '5 years',
       details: 
-         "I'm very passionate about programming and I am planning to do more projects in the future.",
+         "At the time being I was very unsure about my future and my goals in life. This changed quite quickly when I have become a student of my middle school. There I learnt about the basics of programming, the logical thinking ",
    },
 ]
