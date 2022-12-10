@@ -1,9 +1,27 @@
 export default [
    {
-      year: new Date().getFullYear(),
-      title: 'Enthusiastic student',
+      year: '2021',
+      title: 'Getting accepted to university',
       duration: '3 years',
-      details: 
-         "I'm very passionate about programming and I am planning to do more projects in the future.",
+      details: "In middle school I found my goal, which was getting a job as a programmer. So to achieve that step, first I applied to the University of Miskolc. After I got accepted, I was very happy that I have found out what I want to do with my life. My first semester was a little worrying but then I found my motivation and just kept going since then."
    },
+   {
+      year: '2020',
+      title: 'My first projects',
+      duration: '1 year',
+      details: "In my last three years of middle school I had a C# coding class, which introduced me to the language itself and to Visual Studio. At the time I didn't anything know about Object-Oriented Programming or writing complex programs, but I was happy with that I understood the code I was writing. This inspired me to do some small projects, which weren't complex at all, and also weren't OOP at all. I think this period of my life lead to the decision to choose this path.",
+   },
+   {
+      year: '2016',
+      title: 'Getting accepted to middle school',
+      duration: '5 years',
+      details: "At the time being I was very unsure about my future and my goals in life. This changed quite quickly when I become a student of Bláthy Ottó Villamosipari Szakgimnázium. In those 5 years I learnt about the basics of programming, and the logic behind algorithms. I also learned some advanced networking.",
+   },
+   {
+      year: '2013',
+      title: 'When I first met programming..',
+      duration: '2 years',
+      details: "When I was young, I was always interested in computers, especially the hardware side of it. I build and destructed computers as a kid for fun, not knowing anything about it. As time went on, I started to learn how things worked in a computer. At that time I didn't know anything about software. I was in 5th grade when I first came across programming. In my Information Technology class our task was to write programs in Imagine Logo. I really enjoyed doing that. After that, in 7th grade my teacher held some after-school classes where we had the chance to experience Pascal. Back then, I didn't know that it would have such an impact on my life.",
+   },
+
 ]

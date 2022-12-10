@@ -12,9 +12,9 @@ function PortfolioItem({ title, imgUrl, stack, link, desc }) {
          <img
             src={imgUrl}
             alt={title}
-            className="transition ease-in-out delay-100 duration-300 w-full h-76 md:h-86 object-cover cursor-pointer blur-none group-hover:blur-xs"
+            className="transition ease-in-out delay-200 duration-600 w-full h-76 md:h-86 object-cover cursor-pointer blur-none group-hover:blur-xs"
          />
-         <p class="transition ease-in-out delay-100 duration-300 text-center text-xs md:text-sm dark:text-white opacity-0 group-hover:opacity-100 duration-100 text-black font-semibold">
+         <p class="transition ease-in-out delay-150 duration-1000 text-center text-xs md:text-sm dark:text-white opacity-0 group-hover:opacity-100 duration-100 text-black font-semibold">
             {desc}</p>
            
       </div>
