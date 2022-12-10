@@ -1,6 +1,6 @@
 import React from 'react';
 
-function PortfolioItem({ title, imgUrl, stack, link }) {
+function PortfolioItem({ title, imgUrl, stack, link, desc }) {
    return (
       <a 
          href={link}
@@ -8,15 +8,16 @@ function PortfolioItem({ title, imgUrl, stack, link }) {
          rel="noopener noreferrer"
          className="border-2 border-stone-900 dark:border-white rounded-md overflow-hidden"
       >
-         
-      <div className="w-64 bg-red-100 relative group">
-      <div class="opacity-0 group-hover:opacity-100 duration-100 absolute inset-x-0 text-center flex justify-center items-end bg-gray-200 text-black font-semibold">{title}</div>
+      <div className="group">
          <img
             src={imgUrl}
             alt={title}
-            className="w-full h-36 md:h-48 object-cover cursor-pointer blur-none hover:blur-sm"
+            className="transition ease-in-out delay-100 duration-300 w-full h-76 md:h-86 object-cover cursor-pointer blur-none group-hover:blur-sm"
          />
-         </div>
+         <p class="transition ease-in-out delay-100 duration-300 text-center text-xs md:text-sm dark:text-white opacity-0 group-hover:opacity-100 duration-100 text-black font-semibold">
+            {desc}</p>
+           
+      </div>
          <div className="w-full p-4">
             <h3 className="text-lg md:text-xl dark:text-white mb-2 md:mb-3 font-semibold ">{title}</h3>
             <p className="flex flex-wrap gap-2 flex-row items-center justify-start text-xs md:text-sm dark:text-white ">
