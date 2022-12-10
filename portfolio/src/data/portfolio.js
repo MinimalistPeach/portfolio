@@ -4,6 +4,7 @@ export default [
       imgUrl: '/assets/ReportMaker.png',
       stack: ['Python'],
       link: 'https://minimalistpeach.itch.io/jegyzokonyv-generator',
+      desc: 'This is a simple program, which can generate .docx samples for your reports. It can also store the data in .csv format.'
    },
 
 ]
