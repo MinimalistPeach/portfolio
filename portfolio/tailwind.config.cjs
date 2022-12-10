@@ -8,8 +8,19 @@ module.exports = {
 			},
 			blur: {
 				xs: '1.5px'
+			}, 
+			animation: {
+				fadeIn: "fadeIn 1.5s ease-in forwards"
 			},
-		},
+			keyframes: {
+			fadeIn: {
+			  "0%": { opacity: 0 },
+			  "100%": { opacity: 1 }}
+			},
+		}
 	},
 	plugins: [],
+	variants: {
+		animation: ["motion-safe"]
+	}
 };
