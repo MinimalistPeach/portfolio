@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, FC,Suspense } from 'react';
 import Footer from './components/Footer';
 import Intro from './components/Intro';
 import {PortfolioEN, PortfolioHU} from './components/Portfolio';
 import {TimelineEN, TimelineHU} from './components/Timeline';
+import './i18n'
 
 function App() {
 	const [theme, setTheme] = useState(null);
