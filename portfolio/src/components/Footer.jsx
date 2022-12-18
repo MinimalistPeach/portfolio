@@ -46,7 +46,7 @@ function Footer() {
 					</div>
 				</div>
 			<p className="text-sm mt-2  opacity-50">
-            &copy; {new Date().getFullYear()} Made By: Minimalist Peach (László Stremler)
+            &copy; {new Date().getFullYear()} Készítette: Minimalist Peach (László Stremler)
 				
 			</p>
 		</div>
