@@ -10,7 +10,7 @@ module.exports = {
 				xs: '1.5px'
 			}, 
 			animation: {
-				fadeIn: "fadeIn 1.5s ease-in forwards"
+				fadeIn: "fadeIn 0.7s ease-in forwards"
 			},
 			keyframes: {
 			fadeIn: {

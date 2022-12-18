@@ -1,26 +1,27 @@
 import React from 'react';
 
-const callback = function (entries) {
-   entries.forEach((entry) => {
-     console.log(entry);
- 
-     if (entry.isIntersecting) {
-       entry.target.classList.add("animate-fadeIn");
-     } else {
-       entry.target.classList.remove("animate-fadeIn");
-     }
-   });
- };
- 
- const observer = new IntersectionObserver(callback);
- 
- const targets = document.querySelectorAll(".js-show-on-scroll");
- targets.forEach(function (target) {
-   target.classList.add("opacity-0");
-   observer.observe(target);
- });
-
 function TimelineItem({ year, title, duration, details }) {
+
+   const callback = function (entries) {
+      entries.forEach((entry) => {
+        console.log(entry);
+    
+        if (entry.isIntersecting) {
+          entry.target.classList.add("animate-fadeIn");
+        } else {
+          entry.target.classList.remove("animate-fadeIn");
+        }
+      });
+    };
+    
+    const observer = new IntersectionObserver(callback);
+    
+    const targets = document.querySelectorAll(".js-show-on-scroll");
+    targets.forEach(function (target) {
+      target.classList.add("opacity-0");
+      observer.observe(target);
+    });
+   
    return (
       <ol className="flex flex-col md:flex-row relative border-l border-stone-200 dark:border-stone-700">
          <li className="js-show-on-scroll mb-10 ml-4">

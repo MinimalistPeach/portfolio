@@ -1,8 +1,14 @@
 export default [
    {
+      year: '2022',
+      title: 'My first job as a software developer',
+      duration: '6 months',
+      details: "In university I got the opportunity to work with a startup company called prodHost. I was a backend developer there. I created services and tests for them, sometimes I deployed them in Docker. The company's main coding language was C#, so I had to work in that. "
+   },
+   {
       year: '2021',
-      title: 'Getting accepted to university',
-      duration: '3 years',
+      title: 'University years',
+      duration: 'Ongoing',
       details: "In middle school I found my goal, which was getting a job as a programmer. So to achieve that step, first I applied to the University of Miskolc. After I got accepted, I was very happy that I have found out what I want to do with my life. My first semester was a little worrying but then I found my motivation and just kept going since then."
    },
    {
