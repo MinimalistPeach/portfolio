@@ -1,11 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import Footer from './components/Footer';
 import Intro from './components/Intro';
-import {PortfolioEN, PortfolioHU} from './components/Portfolio';
-import {TimelineEN, TimelineHU} from './components/Timeline';
+import Portfolio from './components/Portfolio';
+import Timeline from './components/Timeline';
+import { useTranslation } from 'react-i18next';
+import Flag from 'react-world-flags'
 
 function App() {
 	const [theme, setTheme] = useState(null);
+
+	const [lang] = useState(null);
 
 	useEffect(() => {
 		if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
@@ -19,6 +23,7 @@ function App() {
 		setTheme(theme === 'dark' ? 'light' : 'dark');
 	};
 
+
 	useEffect(() => {
 		if (theme === 'dark') {
 			document.documentElement.classList.add('dark');
@@ -26,6 +31,7 @@ function App() {
 			document.documentElement.classList.remove('dark');
 		}
 	}, [theme]);
+
 
 	const sun = (
 		<svg
@@ -60,6 +66,14 @@ function App() {
 			/>
 		</svg>
 	);
+
+	const lngs = {
+		en: { flag: <Flag code="gb" fallback={ <span>Unknown</span> } height="64" width="64"/>},
+		hu: { flag: <Flag code="hu" fallback={ <span>Unknown</span> } height="64" width="64"/> }
+	  };
+
+	const { i18n } = useTranslation();
+
   return (
 	<>
 		<button
@@ -69,11 +83,18 @@ function App() {
 		>
 			{theme === 'dark' ? sun : moon}
 		</button>
+		<div>
+		{Object.keys(lngs).map((lng) => (
+            <button key={lng} style={{ float: 'right', position: 'relative', top: '50px', border: i18n.resolvedLanguage === lng ? '3px solid green' : 'none' }} type="submit" onClick={() => i18n.changeLanguage(lng)}>
+              {lngs[lng].flag}
+            </button>
+          ))}
+        </div>
 		<div className="bg-white dark:bg-stone-900 text-stone-900 dark:text-stone-300 min-h-screen font-inter">
 			<div className="max-w-5xl w-11/12 mx-auto">
 				<Intro />
-				<PortfolioHU />
-				<TimelineHU />
+				<Portfolio />
+				<Timeline />
 				<Footer />
 			</div>
 		</div>

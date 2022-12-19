@@ -1,6 +1,9 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 function Footer() {
+
+	const {t} = useTranslation(["intro_translation"]);
 	return (
 		<div className="py-5 text-center">
 				<div className="container max-w-screen-lg mx-auto">
@@ -46,7 +49,7 @@ function Footer() {
 					</div>
 				</div>
 			<p className="text-sm mt-2  opacity-50">
-            &copy; {new Date().getFullYear()} Készítette: Minimalist Peach (László Stremler)
+            &copy; {new Date().getFullYear()} {t("intro_translation:footer:madeby")}
 				
 			</p>
 		</div>
