@@ -4,27 +4,6 @@ import Title from './Title';
 import { useTranslation } from 'react-i18next';
 
 function Timeline() {
-
-   const callback = function (entries) {
-      entries.forEach((entry) => {
-        console.log(entry);
-    
-        if (entry.isIntersecting) {
-          entry.target.classList.add("animate-fadeIn");
-        } else {
-          entry.target.classList.remove("animate-fadeIn");
-        }
-      });
-    };
-    
-    const observer = new IntersectionObserver(callback);
-    
-    const targets = document.querySelectorAll(".js-show-on-scroll");
-    targets.forEach(function (target) {
-      target.classList.add("opacity-0");
-      observer.observe(target);
-    });
-
    const {t} = useTranslation(["timeline_translation"]);
 
    var timeline = t('timeline_translation:timeline', { returnObjects: true })

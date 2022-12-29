@@ -9,7 +9,9 @@ import Flag from 'react-world-flags'
 function App() {
 	const [theme, setTheme] = useState(null);
 
-	const [lang] = useState(null);
+	const [lang, setLang] = useState(null);
+
+	const noFlag = 'Flag not found! :(';
 
 	useEffect(() => {
 		if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
@@ -19,9 +21,29 @@ function App() {
 		}
 	}, []);
 
+	useEffect(() => {
+		if (i18n.resolvedLanguage == 'en') {
+			setLang('en');
+		} else {
+			setLang('hu');
+		}
+	}, []);
+
 	const handleThemeSwitch = () => {
 		setTheme(theme === 'dark' ? 'light' : 'dark');
 	};
+
+	const handleLangSwitch = () => {
+		setLang(lang === 'hu' ? 'en' : 'hu');
+	};
+
+	useEffect(() => {
+		if (lang === 'hu') {
+			i18n.changeLanguage('hu');
+		} else {
+			i18n.changeLanguage('en');
+		}
+	}, [lang]);
 
 
 	useEffect(() => {
@@ -67,10 +89,13 @@ function App() {
 		</svg>
 	);
 
-	const lngs = {
-		en: { flag: <Flag code="gb" fallback={ <span>Unknown</span> } height="64" width="64"/>},
-		hu: { flag: <Flag code="hu" fallback={ <span>Unknown</span> } height="64" width="64"/> }
-	  };
+	const hu = (
+		<Flag code="hu" fallback={ <span>{noFlag}</span> } height="64" width="64"/>
+	);
+
+	const en = (
+		<Flag code="gb" fallback={ <span>{noFlag}</span> } height="64" width="64"/>
+	);
 
 	const { i18n } = useTranslation();
 
@@ -84,11 +109,13 @@ function App() {
 			{theme === 'dark' ? sun : moon}
 		</button>
 		<div>
-		{Object.keys(lngs).map((lng) => (
-            <button key={lng} style={{ float: 'right', position: 'relative', top: '50px', border: i18n.resolvedLanguage === lng ? '3px solid green' : 'none' }} type="submit" onClick={() => i18n.changeLanguage(lng)}>
-              {lngs[lng].flag}
-            </button>
-          ))}
+		<button
+			type="button"
+			onClick={handleLangSwitch}
+			className="fixed p-2 z-10 right-20 top-20 bg-emerald-600 dark:bg-green-500 text-lg p-0.5 rounded-md"
+		>
+			{lang === 'hu' ? en : hu}
+		</button>
         </div>
 		<div className="bg-white dark:bg-stone-900 text-stone-900 dark:text-stone-300 min-h-screen font-inter">
 			<div className="max-w-5xl w-11/12 mx-auto">

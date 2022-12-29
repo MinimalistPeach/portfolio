@@ -4,7 +4,7 @@
    {
      "year": "2022",
      "title": "Első munkám szoftverfejlesztőként",
-     "duration": "6 hónap",
+     "duration": "Időtartam: 6 hónap",
      "details": "Egyetemen adódott egy olyan lehetőség számomra, hogy dolgozhatok a prodHost PLC nevezetű startup cégnél. Backend fejlesztőként ismerhettem meg a céges környezet működését, illetve a kollégákkal való együttműködést. Különböző szolgáltatásokat készítettem, illetve azokhoz tesztet. Néhányszor deploy-oltam ezeket Docker-ben. A cég alapvetően C# nyelven dolgozott, így én is abban írtam a kódokat.  "
    },
    {
@@ -16,19 +16,19 @@
    {
      "year": "2020",
      "title": "Az első projektjeim",
-     "duration": "1 év",
+     "duration": "Időtartam: 1 év",
      "details": "Középiskolai pályafutásom utolsó 3 évében volt egy C# tantárgyam, ami bevezetett engem a nyelv sajátosságainak világába, illetve megismertette velem a Visual Studio használatának alapjait. Akkor még nem tudtam semmit az Objektum-Orientált Programozásról, vagy a komplex program írásról de boldog voltam hogy végre megértem a kódot amit gépelek. Ez inspirált engem hogy csináljak kisebb projektetek, amik nagyon egyszerűek voltak és egyáltalán nem követték az OOP irányelveit. Azt hiszem életemnek ez a szakasza vezetett rá arra a döntésre, hogy válasszam a jelenlegi utat."
    },
    {
      "year": "2016",
      "title": "Középiskolai évek",
-     "duration": "5 év",
+     "duration": "Időtartam: 5 év",
      "details": "Akkoriban egyáltalán nem voltam biztos a jövőmmel kapcsolatban. Ez elég hamar megváltozott amikor felvételt nyertem a Bláthy Ottó Villamosipari Szakgimnáziumba. Abban az ott eltöltött 5 évben megtanultam a programozás alapjait és az egész mögött lévő logikat. Ezenkívül alap és közép-haladó szinten megtanultam hálózatot kezelni."
    },
    {
      "year": "2013",
      "title": "Az első találkozásom a programozással",
-     "duration": "2 év",
+     "duration": "Időtartam: 2 év",
      "details": "Fiatalkoromban mindig is érdekeltek a számítógépek, főleg a hardver szemszöge. Építettem és szétbontottam gépeket gyerekként a móka kedvéért úgy, hogy semmit sem értettem hozzá. Ahogy telt az idő elkezdtem megtanulni hogyan működnek a dolgok a számítógépben. Akkoriban nem tudtam semmit a szoftverekről. Ötödik osztály koromban futottam bele a programozásba először. Informatika órán azt a feladatot kaptuk hogy írjunk programot Imagine Logo-ban. Ezután hetedik osztályban az informatika tanárom tartott délutáni szakkört, ahol megtapasztalhattam a Pascal szépségeit. Nyílván akkor még nem tudtam hogy ekkora hatással lesz az életemre."
    }
  ]
