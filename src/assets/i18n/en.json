@@ -1,7 +1,11 @@
 {
     "WELCOMECARD":
     {
-        "title": "Welcome to my portfolio",
-        "name": "László Stremler"
+        "title": "Welcome to my portfolio!",
+        "subtitle": "I am László Stremler, a software developer from Hungary",
+        "subtitle2": "Feel free to look around and check out my projects.",
+        "projects": "Projects",
+        "about": "About me",
+        "jobexp": "Job experience"
     }
 }

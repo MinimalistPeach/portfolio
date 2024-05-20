@@ -6,6 +6,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { PrimeNGConfig } from 'primeng/api';
 import { ButtonModule } from 'primeng/button';
+import { WelcomecardComponent } from './Components/welcomecard/welcomecard.component';
 
 @Component({
   selector: 'app-root',
@@ -15,6 +16,7 @@ import { ButtonModule } from 'primeng/button';
     RouterOutlet,
     TranslateModule,
     CommonModule,
+    WelcomecardComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
@@ -25,6 +27,6 @@ export class AppComponent implements OnInit {
   constructor(private primengConfig: PrimeNGConfig, private translate: TranslateService) { }
   ngOnInit() {
     this.primengConfig.ripple = true;
-    this.translate.setDefaultLang('hu');
+    this.translate.setDefaultLang('en');
   }
 }
