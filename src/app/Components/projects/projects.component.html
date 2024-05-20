@@ -1,0 +1,20 @@
+<h2>My projects</h2>
+<p-timeline [value]="projects" align="alternate" styleClass="customized-timeline">
+    <ng-template pTemplate="marker">
+        <span class="flex w-2rem h-2rem align-items-center justify-content-center text-white border-circle z-1 shadow-1"
+            style="background-color: white">
+            <i class="pi pi-circle-off"></i>
+        </span>
+    </ng-template>
+    <ng-template pTemplate="content" let-project>
+        <p-card [header]="project.title" [subheader]="project.date">
+            <div class="grid">
+                <img *ngIf="project.image" [src]="project.image" [alt]="project.title" height="50" class="shadow-2" />
+                <p>
+                    {{project.description}}
+                </p>
+                <p-button label=">" [text]="true" />
+            </div>
+        </p-card>
+    </ng-template>
+</p-timeline>

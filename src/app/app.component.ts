@@ -7,6 +7,8 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { PrimeNGConfig } from 'primeng/api';
 import { ButtonModule } from 'primeng/button';
 import { WelcomecardComponent } from './Components/welcomecard/welcomecard.component';
+import { ProjectService } from './Services/project-service/project.service';
+import { ProjectsComponent } from './Components/projects/projects.component';
 
 @Component({
   selector: 'app-root',
@@ -16,7 +18,8 @@ import { WelcomecardComponent } from './Components/welcomecard/welcomecard.compo
     RouterOutlet,
     TranslateModule,
     CommonModule,
-    WelcomecardComponent
+    WelcomecardComponent,
+    ProjectsComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
