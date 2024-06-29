@@ -21,6 +21,13 @@ import { CardModule } from 'primeng/card';
   styleUrl: './projects.component.css'
 })
 export class ProjectsComponent {
+
+  constructor(private viewPortScoller: ViewportScroller) {}
+  
+  public scroll(elementId: string): void {
+    this.viewPortScoller.scrollToAnchor(elementId);
+  }
+
   projects: ProjectDTO[] = [
     { date: '2022-01-01', title: 'Project bal', image: 'assets/images/test.jpg', description: 'Description 1' },
     { date: '2022-02-01', title: 'Project jobb', image: 'assets/images/test.jpg', description: 'Description 2' },
