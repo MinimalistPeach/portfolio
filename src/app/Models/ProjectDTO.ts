@@ -3,4 +3,5 @@ export interface ProjectDTO {
     title: string;
     image: string;
     description: string;
+    usedTechs: string[];
 }
