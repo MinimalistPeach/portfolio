@@ -1,6 +1,29 @@
-:host ::ng-deep .p-card { 
-    border-radius: 15px !important; 
-    width: 600px; 
-    border: 0.2px solid black; 
-    max-height: 150px;
-} 
+.card {
+    border-radius: 15px !important;
+    border: 0.2px solid black !important;
+    ;
+    height: 20px !important;
+    ;
+    width: 600px !important;
+    ;
+}
+
+.date {
+    font-size: 1.5rem;
+}
+
+.img {
+    border-radius: 15px !important;
+}
+
+.cim {
+    font-size: xx-large;
+}
+
+:host ::ng-deep .p-timeline-left .p-timeline-event-opposite {
+    text-align: left!important;
+}
+
+.desc {
+    font-size: 1.5rem;
+}

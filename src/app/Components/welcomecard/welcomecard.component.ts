@@ -1,3 +1,4 @@
+import { ViewportScroller } from '@angular/common';
 import { Component } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { ButtonModule } from 'primeng/button';
@@ -10,5 +11,13 @@ import { ButtonModule } from 'primeng/button';
   styleUrl: './welcomecard.component.css'
 })
 export class WelcomecardComponent {
+
+
+  constructor(private viewPortScoller: ViewportScroller) {}
+  
+  public scroll(elementId: string): void {
+    this.viewPortScoller.scrollToAnchor(elementId);
+  }
+
 
 }
