@@ -8,32 +8,30 @@
     </ng-template>
     <ng-template pTemplate="opposite" let-project>
         <p-card class="card">
-            <div class="grid">
-                <div class="col-12">
+            <div class="flex flex-col">
+                <div class="col-6">
+                    <img *ngIf="project.image" [src]="project.image" [alt]="project.title" height="350"
+                        class="shadow-2 img" />
+                </div>
+                <div class="col-6">
                     <p class="cim">
                         {{project.title}}
                     </p>
+                    <p class="desc">Used techstack</p>
+                    <ng-container *ngFor="let tech of project.usedTechs">
+                        <img [src]="projectService.getBadgeLink(tech)" [alt]="tech" height="50">
+                    </ng-container>
                 </div>
-                <div class="col-6">
-                    <img *ngIf="project.image" [src]="project.image" [alt]="project.title" height="150"
-                        class="shadow-2 img" />
-                </div>
-                <div class="col-4">
-                    <p class="desc">
-                        {{project.description}}
-                        <i class="pi pi-caret-right"></i>
-                    </p>
-                </div>
-                <img class="col-2">
-                    @for(tech of project.usedTechs; track tech){
-                    <img [src]="projectService.getBadgeLink(tech)" [alt]="tech" height="50">
-                    }
-                </div>
+            </div>
         </p-card>
     </ng-template>
     <ng-template pTemplate="content" let-project>
         <div class="date">
             {{ project.date }}
+        </div>
+        <div class="desc">
+            {{project.description}}
+            <a href="{{project.url}}" target="_blank" class="pi pi-caret-right url"></a>
         </div>
     </ng-template>
 </p-timeline>

@@ -34,10 +34,10 @@ export class ProjectsComponent {
   }
 
   projects: ProjectDTO[] = [
-    { date: '2022-01-01', title: 'Project bal', image: 'assets/images/test.jpg', description: 'Description 1', usedTechs: ['csharp', 'java'] },
-    { date: '2022-02-01', title: 'Project jobb', image: 'assets/images/test.jpg', description: 'Description 2', usedTechs: ['javascript', 'java'] },
-    { date: '2022-02-01', title: 'Project bal', image: 'assets/images/test.jpg', description: 'Description 2', usedTechs: ['c', 'java'] },
-    { date: '2022-02-01', title: 'Project jobb', image: 'assets/images/test.jpg', description: 'Description 2', usedTechs: ['csharp', 'java'] },
-    { date: '2022-02-01', title: 'Project bal', image: 'assets/images/test.jpg', description: 'Description 2', usedTechs: ['csharp', 'java'] },
+    { date: '2022-01-01', title: 'Project bal', image: 'assets/images/test.jpg', description: 'Fugiat consectetur cillum eu aliquip excepteur et non officia. Anim occaecat laboris Lorem Lorem exercitation aliquip minim laborum cillum laborum ut magna sint eu. Nulla nostrud ex consequat adipisicing aliqua sit qui ipsum magna. Laborum ex et nisi laborum excepteur. Excepteur exercitation sit Lorem enim nostrud ipsum nulla irure ad velit. Ullamco nulla minim cupidatat deserunt sint cillum officia non ullamco proident ex do incididunt. Elit fugiat cillum tempor elit dolor tempor eu velit ad aute eu elit occaecat.', usedTechs: ['csharp', 'java'], url: "https://google.hu" },
+    { date: '2022-02-01', title: 'Project jobb', image: 'assets/images/test.jpg', description: 'Description 2', usedTechs: ['javascript', 'java'], url: "https://google.hu" },
+    { date: '2022-02-01', title: 'Project bal', image: 'assets/images/test.jpg', description: 'Description 2', usedTechs: ['c', 'java'], url: "https://google.hu" },
+    { date: '2022-02-01', title: 'Project jobb', image: 'assets/images/test.jpg', description: 'Description 2', usedTechs: ['csharp', 'java'], url: "https://google.hu" },
+    { date: '2022-02-01', title: 'Project bal', image: 'assets/images/test.jpg', description: 'Description 2', usedTechs: ['csharp', 'java'], url: "https://google.hu" },
   ];
 }
