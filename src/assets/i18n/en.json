@@ -1,11 +1,16 @@
 {
-    "WELCOMECARD":
-    {
+    "WELCOMECARD": {
         "title": "Welcome to my portfolio!",
         "subtitle": "I am László Stremler, a software developer from Hungary",
         "subtitle2": "Feel free to look around and check out my projects.",
         "projects": "Projects",
         "about": "About me",
         "jobexp": "Job experience"
+    },
+    "ABOUTME": {
+        "title": "About me",
+        "text": "I am a software developer from Hungary. I have been working in the industry for x years now. I have experience in web development, mainly in the backend area. I am open to learn new technologies and I am always looking for new challenges.",
+        "hobbies": "My hobbies include playing video games, reading books and watching movies. In my free time I like to go running",
+        "email": "email@gmail.com"
     }
 }
