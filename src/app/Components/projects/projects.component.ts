@@ -1,5 +1,5 @@
-import { CommonModule, NgFor, ViewportScroller } from '@angular/common';
-import { Component } from '@angular/core';
+import { CommonModule, DOCUMENT, NgFor, ViewportScroller } from '@angular/common';
+import { Component, Inject, OnInit } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { ButtonModule } from 'primeng/button';
 import { TimelineModule } from 'primeng/timeline';
@@ -25,11 +25,29 @@ import { ProjectService } from '../../Services/project-service/project.service';
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.css'
 })
-export class ProjectsComponent {
+export class ProjectsComponent implements OnInit {
 
-  constructor(private viewPortScoller: ViewportScroller, public projectService: ProjectService) {}
-  
+  public windowScrolled = false;
+
+  private window: Window;
+
+  constructor(private viewPortScoller: ViewportScroller, public projectService: ProjectService, @Inject(DOCUMENT) private document: Document) { 
+    this.window = this.document.defaultView || window;
+  }
+
+
+  ngOnInit() {
+    this.window.addEventListener('scroll', () => {
+      this.windowScrolled = window.scrollY !== 0;
+    });
+  }
+
+
   public scroll(elementId: string): void {
+    if(elementId === 'top')
+    {
+      this.window.scrollTo(0, 0);
+    }
     this.viewPortScoller.scrollToAnchor(elementId);
   }
 

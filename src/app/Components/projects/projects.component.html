@@ -35,4 +35,7 @@
         </div>
     </ng-template>
 </p-timeline>
-<i class="pi pi-arrow-circle-up topButton" (click)="scroll('top')"></i>
+
+
+<i class="to-top pi pi-arrow-circle-up topButton fixed" (click)="scroll('top')"
+    [ngClass]="{ 'show-scrollTop': windowScrolled }"></i>

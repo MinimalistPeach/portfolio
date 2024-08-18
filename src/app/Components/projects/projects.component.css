@@ -24,11 +24,19 @@
     font-size: 1.5rem;
 }
 
-.topButton {
-    font-size: 3.5rem;
-    color: black;
+.to-top {
+    bottom: 0;
     cursor: pointer;
-    
+    margin: 0 8px 12px 0;
+    position: fixed;
+    right: 0;
+    opacity: 0;
+    font-size: 3.5rem;
+}
+
+.show-scrollTop {
+    opacity: 1 !important;
+    transition: all 0.5s ease-in-out;
 }
 
 .url {
