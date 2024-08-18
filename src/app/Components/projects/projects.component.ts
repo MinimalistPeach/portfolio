@@ -6,6 +6,7 @@ import { TimelineModule } from 'primeng/timeline';
 import { ProjectDTO } from '../../Models/ProjectDTO';
 import { CardModule } from 'primeng/card';
 import { ProjectService } from '../../Services/project-service/project.service';
+import { WelcomecardComponent } from "../welcomecard/welcomecard.component";
 
 
 @Component({
@@ -17,8 +18,9 @@ import { ProjectService } from '../../Services/project-service/project.service';
     CommonModule,
     TimelineModule,
     CardModule,
-    NgFor
-  ],
+    NgFor,
+    WelcomecardComponent
+],
   providers: [
     ProjectService
   ],

@@ -1,41 +1,44 @@
-<h1>My projects</h1>
-<p-timeline id="projects" [value]="projects" class="w-full md:w-20rem">
-    <ng-template pTemplate="marker">
-        <span class="flex w-1rem h-1rem align-items-center justify-content-center border-circle z-1 shadow-1"
-            style="background-color: white">
-            <i class="pi pi-circle-off "></i>
-        </span>
-    </ng-template>
-    <ng-template pTemplate="opposite" let-project>
-        <p-card class="card">
-            <div class="flex flex-col">
-                <div class="col-6">
-                    <img *ngIf="project.image" [src]="project.image" [alt]="project.title" height="350"
-                        class="shadow-2 img" />
+<div class="surface-section text-800">
+    <welcomecard />
+    <h1>My projects</h1>
+    <p-timeline id="projects" [value]="projects" class="w-full md:w-20rem">
+        <ng-template pTemplate="marker">
+            <span class="flex w-1rem h-1rem align-items-center justify-content-center border-circle z-1 shadow-1"
+                style="background-color: white">
+                <i class="pi pi-circle-off "></i>
+            </span>
+        </ng-template>
+        <ng-template pTemplate="opposite" let-project>
+            <p-card class="card">
+                <div class="flex flex-col">
+                    <div class="col-6">
+                        <img *ngIf="project.image" [src]="project.image" [alt]="project.title" height="350"
+                            class="shadow-2 img" />
+                    </div>
+                    <div class="col-6">
+                        <p class="cim">
+                            {{project.title}}
+                        </p>
+                        <p class="desc">Used techstack</p>
+                        <ng-container *ngFor="let tech of project.usedTechs">
+                            <img [src]="projectService.getBadgeLink(tech)" [alt]="tech" height="50">
+                        </ng-container>
+                    </div>
                 </div>
-                <div class="col-6">
-                    <p class="cim">
-                        {{project.title}}
-                    </p>
-                    <p class="desc">Used techstack</p>
-                    <ng-container *ngFor="let tech of project.usedTechs">
-                        <img [src]="projectService.getBadgeLink(tech)" [alt]="tech" height="50">
-                    </ng-container>
-                </div>
+            </p-card>
+        </ng-template>
+        <ng-template pTemplate="content" let-project>
+            <div class="date">
+                {{ project.date }}
             </div>
-        </p-card>
-    </ng-template>
-    <ng-template pTemplate="content" let-project>
-        <div class="date">
-            {{ project.date }}
-        </div>
-        <div class="desc">
-            {{project.description}}
-            <a href="{{project.url}}" target="_blank" class="pi pi-caret-right url"></a>
-        </div>
-    </ng-template>
-</p-timeline>
+            <div class="desc">
+                {{project.description}}
+                <a href="{{project.url}}" target="_blank" class="pi pi-caret-right url"></a>
+            </div>
+        </ng-template>
+    </p-timeline>
 
 
-<i class="to-top pi pi-arrow-circle-up topButton fixed" (click)="scroll('top')"
-    [ngClass]="{ 'show-scrollTop': windowScrolled }"></i>
+    <i class="to-top pi pi-arrow-circle-up topButton fixed" (click)="scroll('top')"
+        [ngClass]="{ 'show-scrollTop': windowScrolled }"></i>
+</div>
